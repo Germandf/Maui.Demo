@@ -3,23 +3,23 @@
     x:Class="MauiXaml.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MauiXaml"
+    xmlns:views="clr-namespace:MauiXaml.Views"
     Title="MauiXaml">
 
     <TabBar>
         <ShellContent
             Title="Main"
-            ContentTemplate="{DataTemplate local:MainPage}"
+            ContentTemplate="{DataTemplate views:MainPage}"
             Icon="dotnet_bot.png" />
 
         <ShellContent
             Title="About"
-            ContentTemplate="{DataTemplate local:AboutPage}"
+            ContentTemplate="{DataTemplate views:AboutPage}"
             Icon="{OnPlatform 'icon_about.png', iOS='icon_about_ios.png', MacCatalyst='icon_about_ios.png'}" />
 
         <ShellContent
-            Title="Notes"
-            ContentTemplate="{DataTemplate local:NotesPage}"
+            Title="Note"
+            ContentTemplate="{DataTemplate views:NotePage}"
             Icon="{OnPlatform 'icon_notes.png', iOS='icon_notes_ios.png', MacCatalyst='icon_notes_ios.png'}" />
     </TabBar>
 
